@@ -154,7 +154,7 @@ def convert_video(
                 if output_foreground is not None:
                     writer_fgr.write(fgr[0], file_name)
                 if output_alpha is not None:
-                    writer_pha.write(pha[0])
+                    writer_pha.write(pha[0], file_name)
                 if output_composition is not None:
                     if output_type == "video":
                         com = fgr * pha + bgr * (1 - pha)
